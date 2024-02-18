@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home_page2">
+
+    <fragment
+        android:id="@+id/home_page2"
+        android:name="com.example.shtokman.Home_page"
+        android:label="fragment_home_page"
+        tools:layout="@layout/fragment_home_page">
+        <action
+            android:id="@+id/action_home_page2_to_workers_page"
+            app:destination="@id/workers_page" />
+        <action
+            android:id="@+id/action_home_page2_to_resp_page"
+            app:destination="@id/resp_page" />
+        <action
+            android:id="@+id/action_home_page2_to_calc_page"
+            app:destination="@id/calc_page" />
+        <action
+            android:id="@+id/action_home_page2_to_sketch_page"
+            app:destination="@id/sketch_page" />
+    </fragment>
+    <fragment
+        android:id="@+id/workers_page"
+        android:name="com.example.shtokman.Workers_page"
+        android:label="workers_page_x"
+        tools:layout="@layout/workers_page_x" >
+        <action
+            android:id="@+id/action_workers_page_to_home_page2"
+            app:destination="@id/home_page2" />
+        <action
+            android:id="@+id/action_workers_page_to_workers_add_page"
+            app:destination="@id/workers_add_page" />
+        <action
+            android:id="@+id/action_workers_page_to_faculty_page"
+            app:destination="@id/faculty_page" />
+        <action
+            android:id="@+id/action_workers_page_to_workers_appearences"
+            app:destination="@id/workers_appearences" />
+    </fragment>
+    <fragment
+        android:id="@+id/resp_page"
+        android:name="com.example.shtokman.Resp_page"
+        android:label="Resp_page" >
+        <action
+            android:id="@+id/action_resp_page_to_home_page2"
+            app:destination="@id/home_page2" />
+    </fragment>
+    <fragment
+        android:id="@+id/calc_page"
+        android:name="com.example.shtokman.Calc_page"
+        android:label="fragment_calc"
+        tools:layout="@layout/fragment_calc" >
+        <action
+            android:id="@+id/action_calc_page_to_home_page2"
+            app:destination="@id/home_page2" />
+    </fragment>
+    <fragment
+        android:id="@+id/sketch_page"
+        android:name="com.example.shtokman.Sketch_page"
+        android:label="Sketch_page" >
+        <action
+            android:id="@+id/action_sketch_page_to_home_page2"
+            app:destination="@id/home_page2" />
+    </fragment>
+    <fragment
+        android:id="@+id/workers_add_page"
+        android:name="com.example.shtokman.worker_page_fragments.Workers_add_page"
+        android:label="Workers_add_page" >
+        <action
+            android:id="@+id/action_workers_add_page_to_workers_page"
+            app:destination="@id/workers_page" />
+        <action
+            android:id="@+id/action_workers_add_page_to_faculty_page"
+            app:destination="@id/faculty_page" />
+    </fragment>
+    <fragment
+        android:id="@+id/faculty_page"
+        android:name="com.example.shtokman.worker_page_fragments.Faculty_page"
+        android:label="fragment_workers_faculty"
+        tools:layout="@layout/fragment_workers_faculty" >
+        <action
+            android:id="@+id/action_faculty_page_to_workers_page"
+            app:destination="@id/workers_page" />
+        <action
+            android:id="@+id/action_faculty_page_to_workers_update"
+            app:destination="@id/workers_update" />
+    </fragment>
+    <fragment
+        android:id="@+id/workers_update"
+        android:name="com.example.shtokman.update.Workers_update"
+        android:label="fragment_workers_update"
+        tools:layout="@layout/fragment_workers_update" >
+        <argument
+            android:name="currentWorker"
+            app:argType="com.example.shtokman.model.Workers" />
+        <action
+            android:id="@+id/action_workers_update_to_faculty_page"
+            app:destination="@id/faculty_page" />
+    </fragment>
+    <fragment
+        android:id="@+id/workers_appearences"
+        android:name="com.example.shtokman.worker_page_fragments.Workers_appearences"
+        android:label="fragment_workers_appearences"
+        tools:layout="@layout/fragment_workers_appearences" >
+        <action
+            android:id="@+id/action_workers_appearences_to_workers_page"
+            app:destination="@id/workers_page" />
+        <action
+            android:id="@+id/action_workers_appearences_to_filter_appearences"
+            app:destination="@id/filter_appearences" />
+        <argument
+            android:name="name"
+            app:argType="string"
+            android:defaultValue="כולם" />
+        <argument
+            android:name="day"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="month"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="year"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <dialog
+        android:id="@+id/filter_appearences"
+        android:name="com.example.work.worker_page_fragments.filter_appearences"
+        android:label="filter_appearences" >
+        <action
+            android:id="@+id/action_filter_appearences_to_workers_appearences"
+            app:destination="@id/workers_appearences" />
+    </dialog>
+</navigation>

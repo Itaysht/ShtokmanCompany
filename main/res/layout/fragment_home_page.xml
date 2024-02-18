@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_f"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_main"
+    tools:context=".Home_page">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_work"
+        android:layout_width="195dp"
+        android:layout_height="195dp"
+        android:layout_marginTop="184dp"
+        android:layout_marginEnd="3dp"
+        android:background="@drawable/button_des"
+        android:drawableBottom="@drawable/custom_button_workers"
+        android:text="עובדים"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toStartOf="@+id/button_resp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/home_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:text="דף הבית"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.12" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_resp"
+        android:layout_width="195dp"
+        android:layout_height="195dp"
+        android:layout_marginTop="184dp"
+        android:layout_marginEnd="1dp"
+        android:drawableBottom="@drawable/custom_button_resp"
+        android:background="@drawable/button_des"
+        android:textColor="@color/white"
+        android:text="מלאי"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_calc"
+        android:layout_width="195dp"
+        android:layout_height="195dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="1dp"
+        android:background="@drawable/button_des"
+        android:drawableBottom="@drawable/custom_button_calc"
+        android:text="חשבונות"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_resp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_sketch"
+        android:layout_width="195dp"
+        android:layout_height="195dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="3dp"
+        android:background="@drawable/button_des"
+        android:drawableBottom="@drawable/custom_button_sketch"
+        android:text="סקיצה"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toStartOf="@+id/button_calc"
+        app:layout_constraintTop_toBottomOf="@+id/button_work" />
+
+    <Button
+        android:id="@+id/home_page_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="46dp"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:text="התנתק"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
